@@ -1,10 +1,10 @@
 <template>
-  <div class="menu">Vue ti ful man</div>
-  <div class="list" v-for="a,i in textman" :key="a">{{a}} <br />
-    <div class="semi-text"> {{textman[i]}} </div> <hr /></div>
+  <div class="menu">EAX Enterprises GmbH - Vue Edition</div>
+  <div class="list" v-for="a,i in textman" :key="a">@ {{a}} <br />
+    <div class="semi-text">- {{textman[i]}} </div> <hr /></div>
   <div class="maintext">
       <ul>
-        <li>This is a sample message <img src="./assets/logo.png" width="20" alt="vue" @click="suckcount=!suckcount; sucktext = (suckcount)? '굿':'노굿'"/> {{sucktext}}</li>
+        <li>Click a button on the right to check realtime rendering <img src="./assets/logo.png" width="20" alt="vue" @click="suckcount=!suckcount; sucktext = (suckcount)? 'flip':'flop'"/> {{sucktext}}</li>
       </ul>
       <p class="talkbox">
         function ({{testval}});
@@ -18,11 +18,11 @@ export default {
   name: 'App',
   data() {
     return {
-      textman : ['Yousuck', 'Yousuck2', 'I suck' ],
+      textman : ['Data binding test 1', 'List 2', 'List 3' ],
       textman2 : [ 1, 3, 5 ],
-      testval : 'you suck man',
+      testval : "arg1, arg2",
       suckcount : true,
-      sucktext : '굿',
+      sucktext : 'flip',
     }
   }
 }
@@ -39,6 +39,7 @@ export default {
 }
 .menu {
   background : darkslategray;
+  display : fixed;
   padding : 23px;
   color : white;
   /* border-radius : 5px; */
